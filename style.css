@@ -1,0 +1,683 @@
+:root {
+    /* Exact color pulls from the Eco Plus Brand Identity and Flyers */
+    --primary: #0B3C26;       /* Deep Forest Green from the logo header banner */
+    --secondary: #1E5138;     /* Mid-tone Organic Leaf Green */
+    --accent: #AACC00;        /* Vibrant Bio-Lime accent tint */
+    --bg-light: #FFFFFF;      /* Pure White for clean, readable card backdrops */
+    --bg-page: #F3F7F5;       /* Lively, ultra-fresh mint-tinted canvas background (Replaces Starch Cream) */
+    --text-dark: #1A1C23;     /* Sleek Dark Charcoal for sharp typography readability */
+    --white: #FFFFFF;
+    --shadow: rgba(11, 60, 38, 0.05);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- GLOBAL CORE RESETS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+main {
+    overflow-x: hidden;
+}
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* --- HEADER & NAVIGATION LOGO ALIGNMENT --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 15px var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.logo-box {
+    display: flex;
+    flex-direction: column;
+}
+.logo-branding-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-branding-wrap img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.brand-name {
+    font-size: 24px;
+    color: var(--primary);
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.brand-tagline {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-dark);
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+.btn-quote-nav {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.btn-quote-nav:hover {
+    background-color: var(--secondary);
+}
+
+/* --- HERO COMPONENT WITH BRAND GRADIENT --- */
+.hero {
+    background: linear-gradient(180deg, #104C32 0%, #1B5E3F 60%, #2A7552 100%);
+    padding: 180px 20px 120px;
+    color: var(--white);
+    text-align: center;
+}
+.hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+.hero-highlight {
+    color: var(--accent);
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    font-weight: 300;
+    color: #E2E8F0;
+}
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.badge-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- REUSABLE SECTION WRAPPERS --- */
+section {
+    padding: 90px 20px;
+}
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 16px;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- CORPORATE PROFILE --- */
+#about {
+    background-color: var(--white);
+}
+.about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+.about-text h3 {
+    color: var(--secondary);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.about-text p {
+    color: #4A5568;
+    margin-bottom: 20px;
+}
+.launch-card {
+    background-color: var(--bg-page);
+    border-left: 5px solid var(--primary);
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+.launch-title {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+.about-image {
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 8px 24px var(--shadow);
+}
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- CLOSED-LOOP LIFECYCLE WITH ECO BACKGROUND --- */
+.lifecycle {
+    background-color: var(--bg-page);
+}
+.lifecycle-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.lifecycle-graphic-image-box {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(11, 60, 38, 0.05);
+    border: 1px solid #E2E8F0;
+    background-color: var(--white);
+}
+.lifecycle-graphic-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.lifecycle-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.step-block {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border-left: 4px solid var(--accent);
+    transition: var(--transition);
+}
+.step-block:hover {
+    transform: translateX(5px);
+    border-left-color: var(--primary);
+}
+.step-block h4 {
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+.step-block p {
+    font-size: 14px;
+    color: #4A5568;
+}
+
+/* --- INDUSTRIAL INFRASTRUCTURE --- */
+.machinery-section {
+    background-color: var(--white);
+}
+.machinery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.machine-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px var(--shadow);
+    overflow: hidden;
+    border-top: 4px solid var(--secondary);
+    transition: var(--transition);
+}
+.machine-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+.machine-img-box {
+    height: 260px;
+    background-color: #E2E8F0;
+    overflow: hidden;
+}
+.machine-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.machine-info {
+    padding: 25px;
+}
+.machine-step-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+.machine-info h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+.machine-info p {
+    font-size: 14px;
+    color: #4A5568;
+}
+
+/* --- PRODUCT SHOWROOM & FLYER BACKGROUND TUNING --- */
+.products {
+    background-color: var(--bg-page);
+}
+.customization-banner {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    background: linear-gradient(135deg, var(--primary) 0%, #154F35 100%);
+    padding: 40px;
+    border-radius: 12px;
+    color: var(--white);
+    box-shadow: 0 6px 20px rgba(11,60,38,0.15);
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+.banner-badge {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+.customization-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.customization-text p {
+    color: #E2E8F0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.customization-image-box {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    background: var(--white);
+}
+.customization-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.product-card {
+    background: var(--white);
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #E2E8F0;
+    transition: var(--transition);
+}
+.product-card.main-focus {
+    border: 1.5px dashed var(--secondary);
+}
+.product-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(11,60,38,0.08);
+}
+.product-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    font-size: 17px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+.product-card p {
+    font-size: 13px;
+    color: #656E7B;
+}
+
+/* --- CONTACT SECTION & VISITING CARD LAYOUT --- */
+.contact-section {
+    background-color: var(--white);
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: start;
+}
+.visiting-card-display, .contact-form-box {
+    background: var(--bg-page);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid #E2E8F0;
+}
+.visiting-card-display h3, .contact-form-box h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 22px;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 10px;
+}
+.card-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border: 1px solid #E2E8F0;
+}
+.card-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-details-list p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #4A5568;
+}
+.contact-link {
+    color: var(--secondary);
+    font-weight: 600;
+}
+.contact-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.direct-contact-placeholders {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #CBD5E1;
+}
+.plant-map-box {
+    margin-top: 25px;
+}
+.plant-map-box h4 {
+    font-size: 15px;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.map-iframe-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: #E2E8F0;
+}
+.simple-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--secondary);
+}
+input, textarea {
+    padding: 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: var(--transition);
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(11,60,38,0.08);
+}
+.btn-submit {
+    background-color: #25D366; 
+    color: var(--white);
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+    transition: var(--transition);
+}
+.btn-submit:hover {
+    background-color: #1BD741;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 166px rgba(37, 211, 102, 0.3);
+}
+
+/* --- FOOTER COMPLIANCE MATRIX --- */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 60px 20px 25px;
+    font-size: 14px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+}
+.footer-brand p {
+    color: #CBD5E1;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+.footer-compliance-box {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+    border-left: 4px solid var(--accent);
+}
+.footer-links h4, .footer-contact h4 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-links a:hover {
+    color: var(--accent);
+}
+.footer-contact p {
+    color: #CBD5E1;
+    line-height: 1.7;
+}
+.copyright-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #A0AEC0;
+}
+
+/* ==================================
+   RESPONSIVE BREAKPOINTS & COHESION
+   ================================== */
+@media (max-width: 1024px) {
+    .about-grid, .lifecycle-container, .contact-container, .customization-banner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .machinery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .hero {
+        padding: 150px 20px 90px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .machinery-grid, .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .visiting-card-display, .contact-form-box {
+        padding: 30px 20px;
+    }
+    .copyright-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-name { font-size: 20px; }
+    .hero h1 { font-size: 26px; }
+    .section-title { font-size: 24px; }
+}
