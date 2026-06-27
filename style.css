@@ -682,7 +682,6 @@ footer {
         text-align: center;
     }
 }
-
 @media (max-width: 480px) {
     .brand-name { font-size: 13px; }
     .hero h1 { font-size: 26px; }
