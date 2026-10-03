@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600;700&family=Montserrat:wght=400;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=1.6">
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
 
@@ -150,59 +150,127 @@
     </section>
 
     <section id="products" class="products">
-        <h2 class="section-title">Manufacturing Portfolio</h2>
-        <div class="section-subtitle">Certified, compostable, 100% biodegradable custom commercial applications.</div>
-        
-        <div class="customization-banner">
-            <div class="customization-text">
-                <div class="banner-badge">✨ Core Enterprise Advantage</div>
-                <h3>Specialized in Customization</h3>
-                <p>
-                    We fully tailor your dimensions, material gauge thickness, load metrics, and styles to suit specific business parameters. We deliver targeted customizations across our lines:
-                </p>
-                <ul class="customization-list">
-                    <li>🟢 High-Fidelity Personalized Logo Brand Printing</li>
-                    <li>🟢 Custom Handles & Structural Selections (D-Cut, W-Cut, and Loops)</li>
-                    <li>🟢 Variable Material Gauge Thickness Built for Heavy Logistics</li>
-                </ul>
+        <div class="products-heading">
+            <span class="eyebrow">OUR PRODUCTS</span>
+            <h2 class="section-title">Sustainable Packaging Portfolio</h2>
+            <div class="section-subtitle">
+                Compostable bags, rolls and paper-based packaging designed for practical,
+                responsible everyday use.
             </div>
         </div>
 
-        <div class="product-grid">
-            <div class="product-card main-focus">
-                <div class="product-icon">🛍️</div>
-                <h3>Bio Carry Bags</h3>
-                <p>Heavy-duty, sustainable grocery retail shopping bags. Fully customizable to specific volume metrics and load capacities.</p>
+        <div class="product-showroom">
+            <div class="product-gallery-panel">
+                <div class="product-featured">
+                    <span class="product-photo-label">PRODUCT RANGE</span>
+                    <img id="featuredProduct"
+                         src="cover.jpeg"
+                         alt="Enturi Bio Polymers compostable packaging product">
+                </div>
+
+                <div class="product-image-column" aria-label="Product images">
+                    <button class="product-thumb active" type="button"
+                            data-image="cover.jpeg"
+                            data-alt="Compostable carry bag product"
+                            aria-label="Show cover product image">
+                        <img src="cover.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="cover2.jpeg"
+                            data-alt="Compostable packaging product"
+                            aria-label="Show cover 2 product image">
+                        <img src="cover2.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="cover3.jpeg"
+                            data-alt="Compostable packaging product"
+                            aria-label="Show cover 3 product image">
+                        <img src="cover3.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="cover4.jpeg"
+                            data-alt="Compostable packaging product"
+                            aria-label="Show cover 4 product image">
+                        <img src="cover4.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="cover5.jpeg"
+                            data-alt="Compostable packaging product"
+                            aria-label="Show cover 5 product image">
+                        <img src="cover5.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="roll2.jpeg"
+                            data-alt="Compostable roll product"
+                            aria-label="Show roll product image">
+                        <img src="roll2.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="paper roll.jpeg"
+                            data-alt="Paper roll product"
+                            aria-label="Show paper roll product image">
+                        <img src="paper roll.jpeg" alt="">
+                    </button>
+
+                    <button class="product-thumb" type="button"
+                            data-image="paper.jpeg"
+                            data-alt="Compostable paper product"
+                            aria-label="Show paper product image">
+                        <img src="paper.jpeg" alt="">
+                    </button>
+                </div>
             </div>
-            <div class="product-card main-focus">
-                <div class="product-icon">✉️</div>
-                <h3>Bio Pouches</h3>
-                <p>Secure moisture-resistant custom seal pouches for commercial retail and merchandise packaging requirements.</p>
-            </div>
-            <div class="product-card main-focus">
-                <div class="product-icon">🛒</div>
-                <h3>Bio Grocery Bags</h3>
-                <p>Optimized tensile strength designs crafted perfectly for fruit, vegetable, and loose store product distributions.</p>
-            </div>
-            <div class="product-card main-focus">
-                <div class="product-icon">🗑️</div>
-                <h3>Bio Garbage Bags</h3>
-                <p>Eco-friendly, leak-proof sanitization roll bags optimized for clean soil structural decomposition loops.</p>
-            </div>
-            <div class="product-card">
-                <div class="product-icon">🔍</div>
-                <h3>Bio Transparent Carry Bags</h3>
-                <p>High-clarity natural compostable options offering clear view compliance for modern retail environments.</p>
-            </div>
-            <div class="product-card">
-                <div class="product-icon">💎</div>
-                <h3>Bio Transparent Pouches</h3>
-                <p>Premium display-grade clarity bio-pouches engineered for clear retail product visibility and shelf presentation.</p>
-            </div>
-            <div class="product-card">
-                <div class="product-icon">🍏</div>
-                <h3>Bio Transparent Grocery Bags</h3>
-                <p>Clear plant-based loose storage bags suited cleanly for fresh food and organic product lines.</p>
+
+            <div class="product-showroom-content">
+                <span class="product-kicker">ENTURI BIO POLYMERS</span>
+                <h3>Packaging made for a cleaner tomorrow.</h3>
+                <p class="product-intro">
+                    Explore our range of compostable packaging products, including carry
+                    bags, rolls and paper solutions. The gallery uses the actual product
+                    photography from the Eco_plus product repository.
+                </p>
+
+                <div class="product-feature-list">
+                    <div class="product-feature">
+                        <span class="feature-number">01</span>
+                        <div>
+                            <h4>Compostable Bags</h4>
+                            <p>Practical packaging solutions for retail, grocery and commercial applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-feature">
+                        <span class="feature-number">02</span>
+                        <div>
+                            <h4>Roll Products</h4>
+                            <p>Flexible roll formats suitable for production, packing and customized applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-feature">
+                        <span class="feature-number">03</span>
+                        <div>
+                            <h4>Paper Solutions</h4>
+                            <p>Paper-based alternatives that complement our sustainable packaging portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customization-card">
+                    <span class="customization-label">CUSTOM SOLUTIONS</span>
+                    <h4>Made around your requirements.</h4>
+                    <p>
+                        We can tailor dimensions, gauge thickness, handles, printing and
+                        packaging formats to match your business requirements.
+                    </p>
+                    <a href="#contact" class="product-cta">Discuss your requirement <span>→</span></a>
+                </div>
             </div>
         </div>
     </section>
